@@ -204,11 +204,11 @@ const expenseReport = [
 // Part one
 const getMultiplicationTwoNumbers = (entries) => {
   let multiplication;
-  for (entrie of entries) {
-    const valToSearch = 2020 - entrie;
+  for (entry of entries) {
+    const valToSearch = 2020 - entry;
     const foundValue = entries.includes(valToSearch);
     if (foundValue) {
-      multiplication = entrie * valToSearch;
+      multiplication = entry * valToSearch;
       break;
     }
   }
@@ -218,12 +218,11 @@ const getMultiplicationTwoNumbers = (entries) => {
 // Part two
 const getMultiplicationThreeNumbers = (entries) => {
   let multiplication;
-  for (entrie of entries) {
+  for (entry of entries) {
     for (let i = 0; i < entries.length; i += 1) {
       for (let j = 0; j < entries.length; ++j) {
-        if ((entrie + entries[i] + entries[j]) === 2020) {
-          console.log('Abr');
-          multiplication = entrie * entries[i] * entries[j];
+        if ((entry + entries[i] + entries[j]) === 2020) {
+          multiplication = entry * entries[i] * entries[j];
         }
       }
     }
